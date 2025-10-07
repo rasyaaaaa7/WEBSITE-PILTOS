@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-PILKETOS 2025 - VOTE | HASIL | ADMIN</title>
+    <link rel="stylesheet" href="style_pilketos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-vote-yea"></i> E-PILKETOS 2025</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <div class="tabs-nav">
+                <button class="tab-button active" data-tab="vote"><i class="fas fa-pen-to-square"></i> VOTING</button>
+                <button class="tab-button" data-tab="hasil"><i class="fas fa-chart-line"></i> HASIL</button>
+                <button class="tab-button" data-tab="admin"><i class="fas fa-user-gear"></i> ADMIN</button>
+            </div>
+
+            <div id="vote" class="tab-content active">
+                <h2 class="instruction">Pilih Salah Satu Pasangan Calon</h2>
+                <p class="warning"><i class="fas fa-exclamation-triangle"></i> Silakan klik Paslon pilihan Anda untuk konfirmasi.</p>
+
+                <div id="kandidatContainer" class="kandidat-grid">
+                    </div>
+                
+                <div id="konfirmasiArea" style="display: none;">
+                    <h3 id="pilihanAnda" class="pilihan-text"></h3>
+                    <button id="btnKonfirmasi" class="btn btn-confirm"><i class="fas fa-check-circle"></i> KONFIRMASI PILIHAN</button>
+                    <button id="btnBatal" class="btn btn-cancel"><i class="fas fa-arrow-left"></i> BATAL / UBAH PILIHAN</button>
+                </div>
+            </div>
+
+            <div id="hasil" class="tab-content">
+                <h2><i class="fas fa-poll"></i> Hasil Perolehan Suara Sementara</h2>
+                <div class="stats-grid">
+                    </div>
+                <div id="hasilKandidatContainer" class="kandidat-grid result-grid">
+                    </div>
+            </div>
+
+            <div id="admin" class="tab-content">
+                <h2><i class="fas fa-lock"></i> Pengaturan Admin</h2>
+                <div class="admin-login-box">
+                    <p>Halaman ini mensimulasikan login admin untuk manajemen data DPT, Kandidat, dan Reset data.</p>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" value="admin" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" value="123456" disabled>
+                    </div>
+                    <button class="btn btn-admin"><i class="fas fa-sign-in-alt"></i> Masuk ke Dashboard Admin</button>
+                    <p style="margin-top: 20px;">* Dalam aplikasi nyata, halaman ini akan mengarah ke sistem backend.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="popupSuccess" class="popup" style="display: none;">
+        <div class="popup-content">
+            <i class="fas fa-check-circle check-icon"></i>
+            <h3>TERIMA KASIH!</h3>
+            <p>Suara Anda telah berhasil direkam.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Panitia Pilketos. Sistem E-Voting.</p>
+        </div>
+    </footer>
+
+    <script src="script_pilketos.js"></script>
+</body>
+</html>
